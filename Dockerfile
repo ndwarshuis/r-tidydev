@@ -35,6 +35,7 @@ RUN apt-get update -qq \
     remotes \
     selectr \
     lintr \
+    stargazer \
     BiocManager
 
 ## install my own tools
