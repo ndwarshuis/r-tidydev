@@ -1,3 +1,6 @@
+## use rocker version stable as base and add tidyverse
+## the rocker/tidyverse image has rstudio which increases the size by
+## at least 500MB
 FROM rocker/r-ver:3.5.2
 
 ## allow user to build faster
