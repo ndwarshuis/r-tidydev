@@ -13,6 +13,18 @@ RUN useradd docker \
 	&& chown docker:docker /home/docker \
 	&& addgroup docker staff
 
+## add X11 support for interactive plotting
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libx11-6 \
+    libxss1 \
+    libxt6 \
+    libxext6 \
+    libsm6 \
+    libice6 \
+    xdg-utils \
+    && rm -rf /var/lib/apt/lists/*
+
 ## install the entire tidyverse as well as dev-related packages
 ## and lintr
 RUN apt-get update -qq \
