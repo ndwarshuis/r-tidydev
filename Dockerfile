@@ -38,11 +38,18 @@ RUN apt-get update -qq \
     libssh2-1-dev \
     libcurl4-openssl-dev \
     libssl-dev \
+    # these for rgl
+    libftgl2 \
+    libcgal-dev \
+    libx11-dev \
+    libglu1-mesa-dev \
     && install2.r --error --ncpus $ncpus \
     --deps TRUE \
     tidyverse \
     dplyr \
+    car \
     devtools \
+    ggpubr \
     formatR \
     remotes \
     selectr \
